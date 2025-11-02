@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-logo: spin 5s linear infinite;
+  --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-bounce: bounce 1.5s infinite;
+  --animate-fadeIn: fadeIn 0.2s ease-out forwards;
+  --breakpoint-xsm: 700px;
+  --color-pr1: #114036;
+  --color-pr2: #15af8d;
+  --color-pr3: #e0f5f1;
+  --color-se1: #cdf765;
+  --color-se2: #ffdd6c;
+  --color-se3: #191919;
+  --color-se4: #ffffff;
+  --color-se5: #f3f3f3;
+  --color-se6: #8f9193;
+  --spacing-nh: var(--header-height); // navbar height
+}
+
+header {
+  @apply fixed left-0 top-0 w-full bg-pr1 px-3 sm:px-8 py-2 text-se4 flex justify-between
+    items-center shadow-[0_4px_6px_rgba(213,250,1,0.831)] z-50;
+
+  nav {
+    @apply flex gap-6;
+
+    .nav-tab {
+      @apply cursor-pointer hover:text-se2 transition duration-200;
+      &::after {
+        @apply content-[''] block bg-se1 h-0.5 w-0 transition-all duration-300;
+      }
+      &:hover::after {
+        @apply w-full;
+      }
+    }
+
+    .active {
+      @apply text-se1 font-semibold;
+      &::after {
+        @apply w-full;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    @apply flex-col items-center;
+
+    nav {
+      @apply flex-col items-center gap-5 overflow-hidden transition-all duration-300;
+    }
+
+    .menu-closed {
+      @apply max-h-0;
+    }
+
+    .menu-open {
+      @apply max-h-80 mt-4;
+    }
+  }
+}
+
+h1 {
+  @apply text-3xl font-bold text-pr1 mb-4;
+}
+
+h2 {
+  @apply text-2xl font-semibold text-pr2 mb-3;
+}
+
+h3 {
+  @apply text-xl font-semibold mb-2;
+}
+
+button,
+.btn {
+  @apply bg-pr1 text-se4 font-medium rounded-lg 
+  cursor-pointer border-1 border-transparent
+  hover:border-se2 transition-colors duration-200 
+  px-4 py-2 text-center shadow-[0_4px_6px_rgba(0,0,0,0.1)];
+}
+
+button:active,
+.btn:active {
+  transform: translateY(2px); /* move down a bit */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3); /* inner shadow */
+}
+
+input,
+select,
+textarea {
+  @apply bg-se4 w-full border border-[#d1d5db] rounded-md px-3 py-2 outline-none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+/* Hide default eye in Edge/IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Hide default eye in Chrome/Edge (WebKit) */
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Hide in Safari (macOS/iOS) */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+section {
+  @apply min-h-[calc(100vh-var(--spacing-nh))];
+}
+
+@layer utilities {
+  .logo {
+    animation: var(--animate-logo);
+  }
+
+  // @keyframes fadeIn {
+  //   from {
+  //     opacity: 0;
+  //     transform: scale(0.95);
+  //   }
+  //   to {
+  //     opacity: 1;
+  //     transform: scale(1);
+  //   }
+  // }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.rounded-mobile-bottom {
+  @apply rounded-bl-xl rounded-br-xl lg:rounded-bl-none lg:rounded-tr-xl;
+}
+
+.rounded-mobile-top {
+  @apply rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl;
+}
