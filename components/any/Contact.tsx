@@ -13,7 +13,7 @@ const Contact = () => {
   const [companyName, setCompanyName] = useState("");
   return (
     <section id="contact" className="section min-h-screen bg-blue-300">
-      <h1>Enter Company's name</h1>
+      <h1>Enter Company&apos;s name</h1>
       <input onChange={(e) => setCompanyName(e.target.value)} />
       Contact
       <p className="px-8">Does {companyName} sponsor skilled worker visa</p>

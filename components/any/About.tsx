@@ -46,7 +46,7 @@ const About = () => {
           <h2>Our Story</h2>
           <div>
             <p className="mb-2">
-              At KY & C Services Limited, we believe life's most important
+              At KY & C Services Limited, we believe life&apos;s most important
               stages should be faced with confidence, not confusion. Our journey
               began with a simple idea: when knowledge is paired with genuine
               care, it can transform how people live and experience life.
@@ -60,7 +60,8 @@ const About = () => {
               <h2>Our Commitment</h2>
               At KY & C, every step we take is guided by one promise: to empower
               people with the tools, wisdom, and support they need - not just to
-              survive life's transitions like retirement, but to truly thrive.
+              survive life&apos;s transitions like retirement, but to truly
+              thrive.
             </div>
           </div>
         </div>
@@ -134,11 +135,11 @@ const About = () => {
 
           <p>
             Cynthia holds an MBA and is currently pursuing a Postgraduate
-            Diploma in Financial Engineering. Through Thrive360, KY&C's flagship
-            community product, she leads efforts to redefine retirement by
-            promoting holistic readiness—both before and after retirement—while
-            also driving the company's broader impact in education, real estate,
-            wellness, and social initiatives.
+            Diploma in Financial Engineering. Through Thrive360, KY&C&apos;s
+            flagship community product, she leads efforts to redefine retirement
+            by promoting holistic readiness—both before and after
+            retirement—while also driving the company&apos;s broader impact in
+            education, real estate, wellness, and social initiatives.
           </p>
         </div>
       </div>
