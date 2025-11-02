@@ -1,7 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 
-export default function DashboardLayout({ children }) {
+interface Props {
+  children: React.ReactNode;
+}
+
+export default function DashboardLayout({ children }: Props) {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
