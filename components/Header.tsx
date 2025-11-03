@@ -3,8 +3,9 @@
 import { useRef, useEffect, useState } from "react";
 import { ContextApi } from "@/shared/context";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import Modal from "./Modal";
+import ComingSoon from "./any/ComingSoon";
 
 interface HeaderProps {
   onHeightChange: (height: number) => void;
@@ -12,6 +13,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [active, setActive] = useState<string>("home");
 
@@ -64,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.4 }
     );
 
     sections.forEach((id) => {
@@ -74,29 +77,23 @@ const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
 
     return () => observer.disconnect();
   }, []);
-
+  {
+    /* <nav ref={navRef} className="text-lg p-2 pb-0 sm:px-6 sm:py-4"></nav> */
+  }
   return (
     <header ref={headerRef}>
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <div className="flex gap-3 items-center">
           <div className="relative w-8 sm:w-10 h-10">
-            <Image
+            <img
               src="/logoWhite.svg"
               alt="ky&c logo"
-              fill
               className="object-contain logo"
-              priority
             />
           </div>
-          <div className="relative w-20 sm:w-28 h-10">
-            <Image
-              src="/logo2.png"
-              alt="ky&c logo"
-              fill
-              className="object-contain"
-              priority
-            />
+          <div className="relative w-25 sm:w-30 h-10">
+            <img src="/logo2.png" alt="ky&c logo" className="object-contain" />
           </div>
         </div>
 
@@ -139,14 +136,19 @@ const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
             Logout
           </span>
         ) : (
-          <Link
-            href="/login"
-            className="text-se2 hover:text-blue-600 transition"
+          <span
+            onClick={() => setIsModalOpen(true)}
+            // href="/login"
+            className="text-se2 hover:text-blue-600 transition cursor-pointer"
           >
             Login
-          </Link>
+          </span>
         )}
       </nav>
+      {/* {Remember to delete me} */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ComingSoon onClose={() => setIsModalOpen(false)} />
+      </Modal>
     </header>
   );
 };

@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      {/* <Contact /> */}
+      <Contact />
 
       <Suspense
         fallback={<div className="text-center py-10">Loading Blog...</div>}

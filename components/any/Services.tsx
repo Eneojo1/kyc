@@ -1,9 +1,9 @@
 "use client";
 
-import { Heart, HeartPulse, Play, ThumbsUp } from "lucide-react";
+import { Play, ThumbsUp } from "lucide-react";
 import { useState } from "react";
 import Modal from "../Modal";
-import Join from "../Join";
+import ComingSoon from "./ComingSoon";
 
 interface ItemProps {
   title: string;
@@ -79,7 +79,7 @@ const Services = () => {
           </button>
 
           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-            <Join />
+            <ComingSoon onClose={() => setIsModalOpen(false)} />
           </Modal>
         </div>
         <div className="sm:p-5">

@@ -112,8 +112,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-stretch p-6 pt-2">
-        <div className="w-full lg:w-1/2 flex justify-center">
+      <div className="flex flex-col sm:flex-row items-center sm:items-stretch p-6 pt-2">
+        <div className="w-full sm:w-1/2 flex justify-center">
           <img
             src="/founder.jpg"
             alt="ceo"
@@ -122,7 +122,7 @@ const About = () => {
           />
         </div>
 
-        <div className="w-full lg:w-1/2 rounded-mobile-bottom p-6 sm:text-xl bg-pr1 text-white">
+        <div className="w-full sm:w-1/2 rounded-mobile-bottom p-6 sm:text-xl bg-pr1 text-white">
           <h2 className="!text-4xl font-semibold mb-4">Our Founder</h2>
           <p className="mb-5">
             <strong>Adaji Cynthia</strong> is the Founder and Chief Executive

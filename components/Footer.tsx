@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <p className="text-sm text-gray-300">Email: info@kyandc.com</p>
-          <p className="text-sm text-gray-300">Phone: +234 800 000 0000</p>
+          <p className="text-sm text-gray-300">Phone: +234 703 270 7572</p>
           <p className="text-sm text-gray-300">Location: Remote & Global</p>
         </div>
       </div>

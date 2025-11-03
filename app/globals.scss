@@ -19,8 +19,8 @@
 }
 
 header {
-  @apply fixed left-0 top-0 w-full bg-pr1 px-3 sm:px-8 py-2 text-se4 flex justify-between
-    items-center shadow-[0_4px_6px_rgba(213,250,1,0.831)] z-50;
+  @apply fixed left-0 top-0 w-full bg-pr1 text-lg px-3 sm:px-8 py-3 text-se4 flex 
+  justify-between items-center shadow-[0_4px_6px_rgba(213,250,1,0.831)] z-50;
 
   nav {
     @apply flex gap-6;
@@ -154,9 +154,9 @@ section {
 }
 
 .rounded-mobile-bottom {
-  @apply rounded-bl-xl rounded-br-xl lg:rounded-bl-none lg:rounded-tr-xl;
+  @apply rounded-bl-xl rounded-br-xl sm:rounded-bl-none sm:rounded-tr-xl;
 }
 
 .rounded-mobile-top {
-  @apply rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl;
+  @apply rounded-tl-xl rounded-tr-xl sm:rounded-tr-none sm:rounded-bl-xl;
 }

@@ -3,13 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import Modal from "../Modal";
-import Join from "../Join";
+import ComingSoon from "./ComingSoon";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="home" className="section  bg-slate-300 relative">
-      Home
       <Image
         src="/homes.png"
         alt="ky&c logo"
@@ -38,7 +37,7 @@ const Hero = () => {
         Start Yout Pathway
       </button>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <Join />
+        <ComingSoon onClose={() => setIsModalOpen(false)} />
       </Modal>
     </section>
   );
