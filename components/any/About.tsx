@@ -93,7 +93,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2  bg-pr3">
+      <div className="grid sm:grid-cols-2 bg-pr3 rounded-xl m-2 mx-6">
         <div className="px-3 sm:px-9 py-2">
           <h2>Our Mission</h2>
           <p>
@@ -111,36 +111,37 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div className="bg-se5 sm:p-20 m-6 rounded-xl">
+        <div className="bg-se6 flex flex-col sm:flex-row items-center sm:items-stretch mt-2 rounded-xl overflow-hidden">
+          <div className="w-full sm:w-1/2 flex justify-center">
+            <img
+              src="/founder.jpg"
+              alt="ceo"
+              loading="lazy"
+              className="object-cover h-auto"
+            />
+          </div>
 
-      <div className="flex flex-col sm:flex-row items-center sm:items-stretch p-6 pt-2">
-        <div className="w-full sm:w-1/2 flex justify-center">
-          <img
-            src="/founder.jpg"
-            alt="ceo"
-            loading="lazy"
-            className="rounded-mobile-top object-cover h-auto"
-          />
-        </div>
+          <div className="w-full sm:w-1/2 p-6 sm:text-xl bg-pr1 text-white">
+            <h2 className="!text-4xl font-semibold mb-4">Our Founder</h2>
+            <p className="mb-5">
+              <strong>Adaji Cynthia</strong> is the Founder and Chief Executive
+              Officer of KY&C Services Limited, a company dedicated to
+              empowering lives with knowledge and care. With over eight years of
+              experience in the pension and financial services industry, she has
+              built expertise in business development, retirement planning, and
+              client engagement.
+            </p>
 
-        <div className="w-full sm:w-1/2 rounded-mobile-bottom p-6 sm:text-xl bg-pr1 text-white">
-          <h2 className="!text-4xl font-semibold mb-4">Our Founder</h2>
-          <p className="mb-5">
-            <strong>Adaji Cynthia</strong> is the Founder and Chief Executive
-            Officer of KY&C Services Limited, a company dedicated to empowering
-            lives with knowledge and care. With over eight years of experience
-            in the pension and financial services industry, she has built
-            expertise in business development, retirement planning, and client
-            engagement.
-          </p>
-
-          <p>
-            Cynthia holds an MBA and is currently pursuing a Postgraduate
-            Diploma in Financial Engineering. Through Thrive360, KY&C&apos;s
-            flagship community product, she leads efforts to redefine retirement
-            by promoting holistic readiness—both before and after
-            retirement—while also driving the company&apos;s broader impact in
-            education, real estate, wellness, and social initiatives.
-          </p>
+            <p>
+              Cynthia holds an MBA and is currently pursuing a Postgraduate
+              Diploma in Financial Engineering. Through Thrive360, KY&C&apos;s
+              flagship community product, she leads efforts to redefine
+              retirement by promoting holistic readiness—both before and after
+              retirement—while also driving the company&apos;s broader impact in
+              education, real estate, wellness, and social initiatives.
+            </p>
+          </div>
         </div>
       </div>
 
