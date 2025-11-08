@@ -158,7 +158,7 @@ const Login = () => {
           </button>
         </div>
         <p className="text-sm text-center mt-8 sm:mt-4 text-se4">
-          Don't have an account?{" "}
+          Don&appos;t have an account?{" "}
           <Link href="/signup" className="text-pr2 underline">
             Sign up
           </Link>

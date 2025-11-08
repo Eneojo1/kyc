@@ -144,10 +144,6 @@ const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
           </Link>
         )}
       </nav>
-      {/* {Remember to delete me} */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <Login onClose={() => setIsModalOpen(false)} />
-      </Modal>
     </header>
   );
 };
