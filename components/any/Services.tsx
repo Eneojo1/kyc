@@ -3,7 +3,7 @@
 import { Play, ThumbsUp } from "lucide-react";
 import { useState } from "react";
 import Modal from "../Modal";
-import ComingSoon from "./ComingSoon";
+import ComingSoon from "../ComingSoon";
 
 interface Props {
   title: string;
@@ -117,8 +117,9 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="bg-pr3 rounded-xl flex items-center flex-col-reverse md:flex-row px-3 sm:px-9 py-5 sm:text-2xl rounded-b-2xl">
+      <div className="bg-pr3 flex rounded-xl mx-3 items-center flex-col-reverse md:flex-row px-3 sm:px-9 py-5 sm:text-2xl rounded-b-2xl">
         <div className="py-1">
+          <h2>Retirement Circle</h2>
           <p className="mb-4">
             Join our supportive community of peers sharing experiences, advice,
             and encouragement for a fulfilling retirement journey.
@@ -138,7 +139,7 @@ const Services = () => {
           <img src="/join.jpg" alt="Join" loading="lazy" />
         </div>
       </div>
-      <hr className="border-pr1 border-1 mt-5" />
+      <hr className="border-pr1 border-1 mt-4" />
     </section>
   );
 };

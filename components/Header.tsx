@@ -5,7 +5,7 @@ import { ContextApi } from "@/shared/context";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Modal from "./Modal";
-import ComingSoon from "./any/ComingSoon";
+import Login from "@/app/(auth)/login/page";
 
 interface HeaderProps {
   onHeightChange: (height: number) => void;
@@ -78,7 +78,6 @@ const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
     return () => observer.disconnect();
   }, []);
   {
-    /* <nav ref={navRef} className="text-lg p-2 pb-0 sm:px-6 sm:py-4"></nav> */
   }
   return (
     <header ref={headerRef}>
@@ -136,18 +135,18 @@ const Header: React.FC<HeaderProps> = ({ onHeightChange, sections }) => {
             Logout
           </span>
         ) : (
-          <span
-            onClick={() => setIsModalOpen(true)}
-            // href="/login"
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/login"
             className="text-se2 hover:text-blue-600 transition cursor-pointer"
           >
             Login
-          </span>
+          </Link>
         )}
       </nav>
       {/* {Remember to delete me} */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <ComingSoon onClose={() => setIsModalOpen(false)} />
+        <Login onClose={() => setIsModalOpen(false)} />
       </Modal>
     </header>
   );

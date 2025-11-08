@@ -18,7 +18,7 @@ const Item: React.FC<ItemProps> = ({ title, body }) => {
 
 const About = () => {
   return (
-    <section id="about" className="section pt-5">
+    <section id="about" className="pt-5">
       <h1 className="px-9">About Us</h1>
       <div className="px-9 py-2 m-2">
         <p className="mb-2">

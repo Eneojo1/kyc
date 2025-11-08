@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Modal from "../Modal";
-import ComingSoon from "./ComingSoon";
+import ComingSoon from "../ComingSoon";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,6 +13,7 @@ const Hero = () => {
         src="/homes.png"
         alt="ky&c logo"
         fill
+        sizes="(min-width: 1024px) 50vw, 100vw"
         priority
         className="w-full h-full object-cover sm:hidden"
       />
@@ -20,19 +21,22 @@ const Hero = () => {
         src="/homem.png"
         alt="ky&c logo"
         fill
+        sizes="(min-width: 1024px) 50vw, 100vw"
         priority
-        className="w-full h-full object-cover hidden sm:block lg:hidden"
+        className="w-full h-full object-cover hidden sm:block llg:hidden"
       />
+
       <Image
         src="/home.png"
         alt="ky&c logo"
         fill
+        sizes="(min-width: 1025px) 50vw, 100vw"
         priority
-        className="w-full h-full object-cover hidden lg:block"
+        className="w-full h-full object-cover hidden llg:block"
       />
       <button
         onClick={() => setIsModalOpen(true)}
-        className="absolute bottom-20 sm:bottom-10 left-1/2 -translate-x-1/2 lg:left-1/3 lg:bottom-1/3 !bg-[#ffdd6c] !text-black !outline-none"
+        className="absolute bottom-20 sm:bottom-10 left-1/2 -translate-x-1/2 llg:left-1/3 llg:bottom-1/3 !bg-[#ffdd6c] !text-black !outline-none"
       >
         Start Yout Pathway
       </button>

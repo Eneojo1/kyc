@@ -6,6 +6,7 @@
   --animate-bounce: bounce 1.5s infinite;
   --animate-fadeIn: fadeIn 0.2s ease-out forwards;
   --breakpoint-xsm: 700px;
+  --breakpoint-llg: 1025px;
   --color-pr1: #114036;
   --color-pr2: #15af8d;
   --color-pr3: #e0f5f1;
@@ -76,7 +77,7 @@ h3 {
 
 button,
 .btn {
-  @apply bg-pr1 text-se4 font-medium rounded-lg 
+  @apply bg-se2 text-se3 font-medium rounded-lg 
   cursor-pointer border-1 border-transparent
   hover:border-se2 transition-colors duration-200 
   px-4 py-2 text-center shadow-[0_4px_6px_rgba(0,0,0,0.1)];
@@ -117,6 +118,10 @@ input[type="password"]::-webkit-textfield-decoration-container {
   display: none;
 }
 
+.login-input {
+  @apply border-none !bg-transparent focus:!shadow-none text-se4;
+}
+
 section {
   @apply min-h-[calc(100vh-var(--spacing-nh))];
 }
@@ -124,6 +129,18 @@ section {
 @layer utilities {
   .logo {
     animation: var(--animate-logo);
+  }
+
+  .login-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+
+  .login-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important;
   }
 
   // @keyframes fadeIn {
@@ -151,12 +168,4 @@ section {
 
 .animate-fadeIn {
   animation: fadeIn 0.2s ease-out forwards;
-}
-
-.rounded-mobile-bottom {
-  @apply rounded-bl-xl rounded-br-xl sm:rounded-bl-none sm:rounded-tr-xl;
-}
-
-.rounded-mobile-top {
-  @apply rounded-tl-xl rounded-tr-xl sm:rounded-tr-none sm:rounded-bl-xl;
 }

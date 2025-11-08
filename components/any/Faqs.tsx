@@ -1,6 +1,6 @@
 "use client";
 import { create } from "domain";
-import { ChevronDown, Minus, Plus } from "lucide-react";
+import { ChevronDown, ChevronRight, Minus, Plus } from "lucide-react";
 import { useState } from "react";
 
 const faqs = [
