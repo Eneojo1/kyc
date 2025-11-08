@@ -18,12 +18,13 @@ const Signup = () => {
     setLoading(true);
     setMessage("");
 
+    if (!supabase) {
+      return <div>Loading...</div>; // or fallback UI
+    }
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: {
-        data: { full_name: fullName }, // optional metadata
-      },
     });
 
     if (error) {
