@@ -76,6 +76,10 @@ const Login = () => {
       return;
     }
 
+    if (!supabase) {
+      return <div>Loading...</div>; // or fallback UI
+    }
+
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: `${window.location.origin}/auth/reset-password`,
     });
@@ -84,7 +88,7 @@ const Login = () => {
       alert(error.message);
     } else {
       alert(
-        "Password reset link sent to your email.If an account exists with that email, a password reset link has been sent."
+        "Password reset link sent to your email. If an account exists with that email, a password reset link has been sent."
       );
     }
 
