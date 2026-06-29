@@ -75,6 +75,10 @@ h3 {
   @apply text-xl font-semibold mb-2;
 }
 
+p {
+  @apply text-justify;
+}
+
 button,
 .btn {
   @apply bg-se2 text-se3 font-medium rounded-lg 

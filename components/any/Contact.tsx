@@ -26,7 +26,7 @@ const Contact = () => {
             <p className="max-w-md">
               Have questions about our services or want to explore how we can
               support your journey? Call us directly at{" "}
-              <strong>+2347032707572</strong> or click the button below to send
+              <strong>+2348103050687</strong> or click the button below to send
               us a message. We&apos;re here to help—every step of the way.
             </p>
 

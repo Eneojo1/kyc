@@ -29,7 +29,7 @@ const PortfolioItem = ({ title, body, src, alt }: Props) => {
     <div className="p-4 bg-pr3 m-3 rounded-xl text-lg md:text-sm shadow-md hover:shadow-lg transition">
       <img src={src} alt={alt} loading="lazy" className="rounded-xl" />
       <h4 className="pt-2 font-bold">{title}</h4>
-      <p>{body}</p>
+      <p className="text-left!">{body}</p>
     </div>
   );
 };
@@ -106,15 +106,6 @@ const Services = () => {
               life."
           />
         </div>
-      </div>
-
-      <div className="flex gap-2 px-6 pb-8">
-        <Play className="text-pr1" size={30} />
-        <p>
-          We design retirement readiness journeys, not just one-off training
-          sessions. Our programmes are customised to each organisation and are
-          grounded in real-life challenges and aspirations of employees.
-        </p>
       </div>
 
       <div className="bg-pr3 flex rounded-xl mx-3 items-center flex-col-reverse md:flex-row px-3 sm:px-9 py-5 sm:text-2xl rounded-b-2xl">

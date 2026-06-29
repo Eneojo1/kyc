@@ -58,10 +58,12 @@ const About = () => {
             </p>
             <div className="mt-7">
               <h2>Our Commitment</h2>
-              At KY & C, every step we take is guided by one promise: to empower
-              people with the tools, wisdom, and support they need - not just to
-              survive life&apos;s transitions like retirement, but to truly
-              thrive.
+              <p>
+                At KY & C, every step we take is guided by one promise: to
+                empower people with the tools, wisdom, and support they need -
+                not just to survive life&apos;s transitions like retirement, but
+                to truly thrive.
+              </p>
             </div>
           </div>
         </div>
@@ -69,12 +71,10 @@ const About = () => {
         <div className="px-3 sm:px-9 py-2 m-2">
           <h2>Our Philosophy</h2>
           <p className="mb-2">
-            We see retirement not as the end of a career, but as the beginning
-            of freedom — a time to invest in passions, nurture relationships,
-            and live with intention. Preparing for that moment requires more
-            than a pension plan. It demands financial clarity, emotional
-            resilience, and physical vitality. Our work is guided by three core
-            beliefs:
+            We see retirement as a transition to further invest in passions,
+            nurture relationships, and live with intention. Preparing for that
+            moment requires more than a pension plan. It demands financial
+            clarity, emotional resilience, and physical vitality.
           </p>
           <Item
             title="1. Preparation is empowerment"
@@ -97,51 +97,57 @@ const About = () => {
         <div className="px-3 sm:px-9 py-2">
           <h2>Our Mission</h2>
           <p>
-            Through Thrive360 and our diversified services, we help people
-            prepare holistically for retirement while delivering sustainable
-            solutions in Education, real estate, wellness, and social impact
+            Through Thrive360 and our diversified services, we help you prepare
+            holistically for retirement while delivering sustainable solutions.
           </p>
         </div>
 
         <div className="px-3 sm:px-9 py-2 m-2">
           <h2>Our Vision</h2>
-          <p>
-            To build a world where retirement is not feared, but embraced - a
-            thriving stage of life supported by knowledge, wellness, and care
-          </p>
+          <p>To build A world where retirement is embraced</p>
         </div>
       </div>
-      <div className="bg-se5 sm:p-20 m-6 rounded-xl">
-        <div className="bg-se6 flex flex-col sm:flex-row items-center sm:items-stretch mt-2 rounded-xl overflow-hidden">
-          <div className="w-full sm:w-1/2 flex justify-center">
-            <img
-              src="/founder.jpg"
-              alt="ceo"
-              loading="lazy"
-              className="object-cover h-auto"
-            />
-          </div>
 
-          <div className="w-full sm:w-1/2 p-6 sm:text-xl bg-pr1 text-white">
-            <h2 className="!text-4xl font-semibold mb-4">Our Founder</h2>
-            <p className="mb-5">
-              <strong>Adaji Cynthia</strong> is the Founder and Chief Executive
-              Officer of KY&C Services Limited, a company dedicated to
-              empowering lives with knowledge and care. With over eight years of
-              experience in the pension and financial services industry, she has
-              built expertise in business development, retirement planning, and
-              client engagement.
-            </p>
+      <div className="bg-white py-16 px-6 md:px-14 ">
+        <div className="max-w-6xl mx-auto space-y-20 bg-pr3 md:p-6 rounded-lg">
+          {team.map((member, index) => (
+            <div
+              key={index}
+              // className="bg-se6 flex flex-col sm:flex-row items-center sm:items-stretch mt-2 rounded-xl overflow-hidden"
+              className={`flex flex-col md:flex-row items-center gap-10 ${
+                member.reverse ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* IMAGE */}
+              <div className="w-full md:w-1/2 aspect-[9/8]">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top rounded-xl shadow-lg"
+                />
+              </div>
 
-            <p>
-              Cynthia holds an MBA and is currently pursuing a Postgraduate
-              Diploma in Financial Engineering. Through Thrive360, KY&C&apos;s
-              flagship community product, she leads efforts to redefine
-              retirement by promoting holistic readiness—both before and after
-              retirement—while also driving the company&apos;s broader impact in
-              education, real estate, wellness, and social initiatives.
-            </p>
-          </div>
+              {/* TEXT */}
+              <div className="w-full md:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                  Meet {member.name}
+                </h2>
+
+                <p className="text-se6 font-medium mt-2">{member.role}</p>
+
+                <div className="mt-5 text-gray-600 leading-8 space-y-6">
+                  {member.description
+                    .trim()
+                    .split("\n\n")
+                    .map((paragraph, index) => (
+                      <p key={index} className="indent-8">
+                        {paragraph}
+                      </p>
+                    ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -151,3 +157,88 @@ const About = () => {
 };
 
 export default About;
+
+const team = [
+  {
+    name: "Adaji Cynthia",
+    role: "Chief Executive Officer",
+    image: "/founder1.jpg",
+    description: `Cynthia is the Founder and Chief Executive Officer 
+    of KY&C Services Limited, a company dedicated to empowering individuals 
+    through knowledge and comprehensive care. With over ten decades of 
+    collective experience in strategy development, retirement planning, and 
+    execution within the pension and financial services sector, Cynthia offers 
+    deep expertise in business development, retirement strategy development, 
+    and client relationship management. She holds an MBA and a postgraduate 
+    diploma in financial engineering. Through KY&C's flagship community initiative, 
+    Thrive360, Cynthia leads transformative efforts to reshape the retirement 
+    experience by promoting holistic preparedness before and after retirement. 
+    She also guides the company's strategic growth across education, social 
+    development, wellness, and real estate sectors.`,
+    reverse: false,
+  },
+  {
+    name: "Dr. Stanley Chukwuemeka Okereafor (PhD)",
+    role: "Director Strategic communication and advocacy",
+    image: "/founder2.jpg",
+    description: `Stanley is a seasoned development communication 
+    specialist and award-winning public speaker with over 20 years of experience. 
+    He excels in strategic communication, advocacy, and capacity building, creating 
+    impactful national campaigns in collaboration with international agencies and the 
+    Nigerian Government. Strategic communication and advocacy.
+    
+
+    Holding a PhD in Mass Communication from Bingham University and advanced training from global institutions, 
+    Dr. Okereafor's expertise spans public health advocacy, knowledge management, 
+    and multimedia content production. He serves as Trustee for the Johns Hopkins Public 
+    Health in Nigeria Initiative and leads the Leadership School Alumni Association at 
+    the African Centre for Leadership, Strategy and Development. 
+    
+
+    Author of Public Speaking: Basic Skills, Dr. Okereafor balances his professional life with passions for fitness, 
+    travel, and outdoor activities.
+
+
+`,
+    reverse: true,
+  },
+];
+
+function FoundersSection() {
+  return (
+    <section className="bg-white py-16 px-6 md:px-20">
+      <div className="max-w-6xl mx-auto space-y-20">
+        {team.map((member, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center gap-10 ${
+              member.reverse ? "md:flex-row-reverse" : ""
+            }`}
+          >
+            {/* IMAGE */}
+            <div className="w-full md:w-1/2">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-[420px] object-cover rounded-xl shadow-lg"
+              />
+            </div>
+
+            {/* TEXT */}
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                Meet {member.name}
+              </h2>
+
+              <p className="text-indigo-600 font-medium mt-2">{member.role}</p>
+
+              <p className="mt-5 text-gray-600 leading-relaxed">
+                {member.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
