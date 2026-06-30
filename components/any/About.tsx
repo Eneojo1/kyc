@@ -22,16 +22,16 @@ const About = () => {
       <h1 className="px-9">About Us</h1>
       <div className="px-9 py-2 m-2">
         <p className="mb-2">
-          KY&C Services Limited is a forward-looking company dedicated to
-          empowering lives with knowledge and care. We operate across Education,
-          Real Estate, Beauty & Wellness, and Social Impact, providing
-          innovative solutions that add value to individuals and communities at
-          different stages of life.
+          KY&C Services Limited is a customer-focused and forward-looking
+          company dedicated to empowering lives with knowledge and care. We
+          operate across Education, Social Impact, Beauty & Wellness, and Real
+          Estate, providing innovative solutions that add value to individuals
+          and communities at different stages of life.
         </p>
 
         <p>
           At the heart of our work is Thrive360, our flagship community
-          platform, designed to help people prepare for and embrace retirement
+          platform, designed to help you prepare for and embrace retirement
           holistically—financially, socially, and emotionally.
         </p>
       </div>
@@ -108,43 +108,35 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bg-white py-16 px-6 md:px-14 ">
-        <div className="max-w-6xl mx-auto space-y-20 bg-pr3 md:p-6 rounded-lg">
+      <div className="bg-white py-16 px-6 md:px-14">
+        <div className="max-w-6xl mx-auto bg-pr3 p-4 md:p-6 rounded-lg space-y-20">
           {team.map((member, index) => (
-            <div
-              key={index}
-              // className="bg-se6 flex flex-col sm:flex-row items-center sm:items-stretch mt-2 rounded-xl overflow-hidden"
-              className={`flex flex-col md:flex-row items-center gap-10 ${
-                member.reverse ? "md:flex-row-reverse" : ""
-              }`}
-            >
-              {/* IMAGE */}
-              <div className="w-full md:w-1/2 aspect-[9/8]">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover object-top rounded-xl shadow-lg"
-                />
-              </div>
+            <div key={index} className="overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className={`w-full md:w-1/3 h-auto rounded-xl shadow-lg object-cover object-top mb-6 md:mb-4 ${
+                  member.reverse
+                    ? "md:float-right md:ml-6"
+                    : "md:float-left md:mr-6"
+                }`}
+              />
 
-              {/* TEXT */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-                  Meet {member.name}
-                </h2>
+              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                Meet {member.name}
+              </h2>
 
-                <p className="text-se6 font-medium mt-2">{member.role}</p>
+              <p className="text-se6 font-medium mt-2">{member.role}</p>
 
-                <div className="mt-5 text-gray-600 leading-8 space-y-6">
-                  {member.description
-                    .trim()
-                    .split("\n\n")
-                    .map((paragraph, index) => (
-                      <p key={index} className="indent-8">
-                        {paragraph}
-                      </p>
-                    ))}
-                </div>
+              <div className="mt-5 text-gray-600 leading-8 space-y-6">
+                {member.description
+                  .trim()
+                  .split("\n\n")
+                  .map((paragraph, i) => (
+                    <p key={i} className="indent-8">
+                      {paragraph}
+                    </p>
+                  ))}
               </div>
             </div>
           ))}

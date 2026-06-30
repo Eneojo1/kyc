@@ -34,11 +34,12 @@ const Hero = () => {
         priority
         className="w-full h-full object-cover hidden llg:block"
       />
+
       <button
         onClick={() => setIsModalOpen(true)}
         className="absolute bottom-20 sm:bottom-10 left-1/2 -translate-x-1/2 llg:left-1/3 llg:bottom-1/3 !bg-[#ffdd6c] !text-black !outline-none"
       >
-        Start Yout Pathway
+        {"EXPLORE YOUR POSSIBILITIES >"}
       </button>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <ComingSoon onClose={() => setIsModalOpen(false)} />

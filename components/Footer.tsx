@@ -1,6 +1,9 @@
 "use client";
+import { Facebook, FacebookIcon } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa6";
 
 interface FooterProps {
   sections: string[];
@@ -78,9 +81,32 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+      <div className="mt-10 flex border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
         &copy; {new Date().getFullYear()} KY&C Services Ltd. All rights
         reserved.
+        <span className="ml-auto flex gap-3 [&_svg]:w-7 [&_svg]:h-7">
+          <Link
+            href="https://www.facebook.com/search/top?q=kyandc%20services"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook />
+          </Link>
+          <Link
+            href="https://www.instagram.com/kyand_cservices/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </Link>
+          <Link
+            href="https://wa.me/2348103050687"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+          </Link>
+        </span>
       </div>
     </footer>
   );

@@ -1,25 +1,22 @@
 "use client";
 
-import { Play, ThumbsUp } from "lucide-react";
+import { ThumbsUp } from "lucide-react";
 import { useState } from "react";
 import Modal from "../Modal";
 import ComingSoon from "../ComingSoon";
 
 interface Props {
   title: string;
-  body: string;
+  body?: string;
   src?: string;
   alt?: string;
 }
 
-const Item = ({ title, body }: Props) => {
+const Item = ({ title }: Props) => {
   return (
     <div className="bg-pr3 flex gap-3 text-sm p-4 mb-2 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition">
-      <ThumbsUp size={50} className="text-pr2" />
-      <div>
-        <h3 className="pt-2 text-pr2">{title}</h3>
-        <p>{body}</p>
-      </div>
+      <ThumbsUp size={40} className="text-pr2" />
+      <h3 className="pt-2 text-pr2">{title}</h3>
     </div>
   );
 };
@@ -83,28 +80,11 @@ const Services = () => {
 
       <div className="px-3 sm:px-4 my-5">
         <h2 className="pt-2">What We Do Differently</h2>
-        <p>
-          Unlike traditional financial advisory firms, our approach is
-          integrated and human-centred. We combine:
-        </p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-4">
-          <Item
-            title="Financial Literacy"
-            body="Helping employees understand their passions, investment, and savings
-          with practical clarity."
-          />
-
-          <Item
-            title="Emotional Support"
-            body="Providing counselling and community-building so retirement feels
-              like a transition, not a loss."
-          />
-
-          <Item
-            title="Health Awareness"
-            body="Encouraging proactive physical wellness for long-term quality of
-              life."
-          />
+          <Item title="Holistic approach" />
+          <Item title="Human centered" />
+          <Item title="Bespoke" />
         </div>
       </div>
 
