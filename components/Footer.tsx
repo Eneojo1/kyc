@@ -74,9 +74,16 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
-          <p className="text-sm text-gray-300">Email: info@kyandc.com</p>
-          <p className="text-sm text-gray-300">Phone: +234 703 270 7572</p>
-          <p className="text-sm text-gray-300">Location: Remote & Global</p>
+          <p className="text-sm text-gray-300">
+            <strong>Email:</strong> Cynthia.adaji@kyandc.com
+          </p>
+          <p className="text-sm text-gray-300">
+            <strong>Phone:</strong> +234 810 305 0687
+          </p>
+          <p className="text-sm text-gray-300">
+            <strong>Location:</strong> Plot 791, Gospel light avenue Durumi Area
+            1, Abuja
+          </p>
         </div>
       </div>
 

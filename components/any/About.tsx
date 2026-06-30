@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 interface ItemProps {
   title: string;
@@ -152,7 +151,7 @@ export default About;
 
 const team = [
   {
-    name: "Adaji Cynthia",
+    name: "Cynthia Adaji",
     role: "Chief Executive Officer",
     image: "/founder1.jpg",
     description: `Cynthia is the Founder and Chief Executive Officer 
@@ -171,8 +170,8 @@ const team = [
   },
   {
     name: "Dr. Stanley Chukwuemeka Okereafor (PhD)",
-    role: "Director Strategic communication and advocacy",
-    image: "/founder2.jpg",
+    role: "Director, Strategic Communication and Advocacy",
+    image: "/founder2.jpeg",
     description: `Stanley is a seasoned development communication 
     specialist and award-winning public speaker with over 20 years of experience. 
     He excels in strategic communication, advocacy, and capacity building, creating 
