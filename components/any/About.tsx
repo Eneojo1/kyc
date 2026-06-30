@@ -123,10 +123,10 @@ const About = () => {
               />
 
               <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-                Meet {member.name}
+                {member.name}
               </h2>
 
-              <p className="text-se6 font-medium mt-2">{member.role}</p>
+              <p className="text-se6 font-medium">{member.role}</p>
 
               <div className="mt-5 text-gray-600 leading-8 space-y-6">
                 {member.description

@@ -81,10 +81,8 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-10 flex border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} KY&C Services Ltd. All rights
-        reserved.
-        <span className="ml-auto flex gap-3 [&_svg]:w-7 [&_svg]:h-7">
+      <div className="mt-10 sm:flex justify-between border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+        <div className="flex gap-3 [&_svg]:w-7 [&_svg]:h-7 justify-center pb-2">
           <Link
             href="https://www.facebook.com/search/top?q=kyandc%20services"
             target="_blank"
@@ -106,7 +104,11 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
           >
             <FaWhatsapp />
           </Link>
-        </span>
+        </div>
+        <div>
+          &copy; {new Date().getFullYear()} KY&C Services Ltd. All rights
+          reserved.
+        </div>
       </div>
     </footer>
   );
